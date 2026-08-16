@@ -64,14 +64,20 @@ function ArchitectureNode({
   emphasized?: boolean;
 }) {
   return (
-    <div className={`flex min-h-32 flex-col items-center justify-center border p-4 text-center sm:items-stretch sm:justify-between sm:text-left ${emphasized ? "border-black bg-black text-white" : "border-black bg-white text-black"}`}>
+    <div
+      className={`flex min-h-32 flex-col items-center justify-center border p-4 text-center sm:items-stretch sm:justify-between sm:text-left ${emphasized ? "border-black bg-black text-white" : "border-black bg-white text-black"}`}
+    >
       <div className="flex w-full items-center justify-between font-mono text-[9px] uppercase tracking-[0.1em]">
         <span className={emphasized ? "text-white/55" : "text-black/45"}>{index}</span>
         <span className={emphasized ? "text-white/55" : "text-black/45"}>{eyebrow}</span>
       </div>
       <div className="mt-5">
         <p className="font-mono text-xs font-semibold">{title}</p>
-        <p className={`mt-2 text-[11px] leading-5 ${emphasized ? "text-white/60" : "text-black/50"}`}>{description}</p>
+        <p
+          className={`mt-2 text-[11px] leading-5 ${emphasized ? "text-white/60" : "text-black/50"}`}
+        >
+          {description}
+        </p>
       </div>
     </div>
   );
@@ -79,7 +85,10 @@ function ArchitectureNode({
 
 export function ArchitectureSection() {
   return (
-    <section id="architecture" className="section-pad scroll-mt-28 bg-white px-5 text-black sm:px-8 lg:px-10 xl:scroll-mt-20">
+    <section
+      id="architecture"
+      className="section-pad scroll-mt-28 bg-white px-5 text-black sm:px-8 lg:px-10 xl:scroll-mt-20"
+    >
       <div className="mx-auto max-w-7xl">
         <SectionHeading
           index="02"
@@ -89,23 +98,7 @@ export function ArchitectureSection() {
           inverted
         />
 
-        <div className="mt-12 grid gap-10 sm:mt-16 lg:mt-20 lg:grid-cols-[.65fr_1.35fr]">
-          <div className="border-t border-black pt-5">
-            {[
-              ["Delivery plane", "Source changes move through an explicit, automated release path."],
-              ["Runtime boundary", "Managed compute connects to application data and object storage."],
-              ["Control plane", "Infrastructure, access, and diagnostics remain visible and repeatable."],
-            ].map(([title, description], index) => (
-              <div key={title} className="grid grid-cols-[30px_1fr] gap-4 border-b border-black/15 py-5">
-                <span className="font-mono text-[10px] text-black/45">0{index + 1}</span>
-                <div>
-                  <h3 className="text-sm font-semibold">{title}</h3>
-                  <p className="mt-2 text-sm leading-6 text-black/55">{description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-
+        <div className="mt-12 grid gap-10 sm:mt-16 lg:mt-20">
           <div className="border border-black">
             <div className="flex flex-col items-start gap-1 border-b border-black px-4 py-4 font-mono text-[9px] uppercase tracking-[0.08em] sm:flex-row sm:items-center sm:justify-between sm:px-5 sm:text-[10px] sm:tracking-[0.1em]">
               <span>aws-reference-architecture.yml</span>
@@ -114,7 +107,9 @@ export function ArchitectureSection() {
 
             <figure className="p-4 sm:p-8">
               <figcaption className="sr-only">
-                AWS delivery architecture showing CodeCommit flowing through CodePipeline to Elastic Beanstalk, an EC2 runtime connected to RDS and S3, with CloudFormation, IAM, and CloudShell supporting the environment.
+                AWS delivery architecture showing CodeCommit flowing through CodePipeline to Elastic
+                Beanstalk, an EC2 runtime connected to RDS and S3, with CloudFormation, IAM, and
+                CloudShell supporting the environment.
               </figcaption>
 
               <div className="border border-black/25 p-3 sm:p-5">
@@ -126,7 +121,10 @@ export function ArchitectureSection() {
                 <div className="mt-4 grid items-stretch sm:grid-cols-[1fr_32px_1fr_32px_1fr]">
                   {deliveryStages.map((stage, index) => (
                     <div key={stage.title} className="contents">
-                      <ArchitectureNode {...stage} emphasized={index === deliveryStages.length - 1} />
+                      <ArchitectureNode
+                        {...stage}
+                        emphasized={index === deliveryStages.length - 1}
+                      />
                       {index < deliveryStages.length - 1 ? <FlowConnector /> : null}
                     </div>
                   ))}
@@ -134,7 +132,9 @@ export function ArchitectureSection() {
               </div>
 
               <div className="flex flex-col items-center py-3 text-black/45" aria-hidden="true">
-                <span className="font-mono text-[8px] uppercase tracking-[0.1em]">deploys and configures</span>
+                <span className="font-mono text-[8px] uppercase tracking-[0.1em]">
+                  deploys and configures
+                </span>
                 <ArrowDown className="mt-1 size-4 stroke-[1.25]" />
               </div>
 
@@ -154,14 +154,19 @@ export function ArchitectureSection() {
                   <FlowConnector />
                   <div className="grid gap-3 sm:grid-rows-2">
                     {runtimeServices.map((service, index) => (
-                      <div key={service.title} className="flex min-h-24 flex-col items-center justify-center border border-black p-4 text-center sm:items-stretch sm:text-left">
+                      <div
+                        key={service.title}
+                        className="flex min-h-24 flex-col items-center justify-center border border-black p-4 text-center sm:items-stretch sm:text-left"
+                      >
                         <div className="flex w-full items-center justify-between font-mono text-[9px] uppercase tracking-[0.1em] text-black/45">
                           <span>0{index + 5}</span>
                           <span>{index === 0 ? "Data" : "Storage"}</span>
                         </div>
                         <div className="mt-4">
                           <p className="font-mono text-xs font-semibold">{service.title}</p>
-                          <p className="mt-1 text-[11px] leading-5 text-black/50">{service.description}</p>
+                          <p className="mt-1 text-[11px] leading-5 text-black/50">
+                            {service.description}
+                          </p>
                         </div>
                       </div>
                     ))}
@@ -170,17 +175,26 @@ export function ArchitectureSection() {
               </div>
 
               <div className="flex flex-col items-center py-3 text-black/45" aria-hidden="true">
-                <span className="font-mono text-[8px] uppercase tracking-[0.1em]">provisioned and secured by</span>
+                <span className="font-mono text-[8px] uppercase tracking-[0.1em]">
+                  provisioned and secured by
+                </span>
                 <ArrowDown className="mt-1 size-4 stroke-[1.25]" />
               </div>
 
               <div className="grid border-l border-t border-black sm:grid-cols-2">
                 {foundationServices.map((service) => (
-                  <div key={service.title} className="flex min-h-28 flex-col items-center justify-center border-b border-r border-black p-4 text-center sm:items-stretch sm:justify-between sm:text-left">
-                    <span className="font-mono text-[9px] text-black/45">{service.index} / Foundation</span>
+                  <div
+                    key={service.title}
+                    className="flex min-h-28 flex-col items-center justify-center border-b border-r border-black p-4 text-center sm:items-stretch sm:justify-between sm:text-left"
+                  >
+                    <span className="font-mono text-[9px] text-black/45">
+                      {service.index} / Foundation
+                    </span>
                     <div className="mt-4">
                       <p className="font-mono text-xs font-semibold">{service.title}</p>
-                      <p className="mt-2 text-[11px] leading-5 text-black/50">{service.description}</p>
+                      <p className="mt-2 text-[11px] leading-5 text-black/50">
+                        {service.description}
+                      </p>
                     </div>
                   </div>
                 ))}
@@ -188,10 +202,14 @@ export function ArchitectureSection() {
 
               <div className="mt-4 flex flex-col items-center justify-between gap-3 border border-dashed border-black/45 px-4 py-4 text-center sm:flex-row sm:text-left">
                 <div>
-                  <p className="font-mono text-[9px] uppercase tracking-[0.1em] text-black/45">09 / Operations</p>
+                  <p className="font-mono text-[9px] uppercase tracking-[0.1em] text-black/45">
+                    09 / Operations
+                  </p>
                   <p className="mt-1 font-mono text-xs font-semibold">CloudShell</p>
                 </div>
-                <p className="max-w-sm text-[11px] leading-5 text-black/50 sm:text-right">Controlled diagnostics and environment operations</p>
+                <p className="max-w-sm text-[11px] leading-5 text-black/50 sm:text-right">
+                  Controlled diagnostics and environment operations
+                </p>
               </div>
 
               <div className="mt-5 flex flex-wrap gap-x-5 gap-y-2 border-t border-black/15 pt-4 font-mono text-[8px] uppercase tracking-[0.08em] text-black/40">

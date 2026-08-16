@@ -8,15 +8,18 @@ export const portfolio = {
   specializations: [
     {
       title: "Backend systems",
-      description: "Business logic, service architecture, authentication, validation, and data flows built for change.",
+      description:
+        "Business logic, service architecture, authentication, validation, and data flows built for change.",
     },
     {
       title: "API engineering",
-      description: "Reliable REST interfaces and third-party integrations with consistent contracts and error handling.",
+      description:
+        "Reliable REST interfaces and third-party integrations with consistent contracts and error handling.",
     },
     {
       title: "Cloud delivery",
-      description: "Repeatable AWS deployments, infrastructure configuration, access control, and production troubleshooting.",
+      description:
+        "Repeatable AWS deployments, infrastructure configuration, access control, and production troubleshooting.",
     },
   ],
   caseStudies: [
@@ -31,7 +34,17 @@ export const portfolio = {
         "Support automated delivery from CodeCommit through CodePipeline",
         "Work with CloudFormation and IAM for repeatable, controlled infrastructure",
       ],
-      technologies: ["EC2", "Elastic Beanstalk", "S3", "CodeCommit", "CodePipeline", "RDS", "CloudShell", "CloudFormation", "IAM"],
+      technologies: [
+        "EC2",
+        "Elastic Beanstalk",
+        "S3",
+        "CodeCommit",
+        "CodePipeline",
+        "RDS",
+        "CloudShell",
+        "CloudFormation",
+        "IAM",
+      ],
       outcome: "End-to-end",
       outcomeLabel: "source-to-production delivery visibility",
     },
@@ -72,7 +85,17 @@ export const portfolio = {
       label: "Core",
       icon: "backend" as ExpertiseIcon,
       description: "Application boundaries, reusable services, and predictable interfaces.",
-      skills: ["Node.js", "Express.js", "Java", "REST APIs", "Authentication", "RBAC", "Validation", "Error handling", "API integration"],
+      skills: [
+        "Node.js",
+        "Express.js",
+        "TypeScript",
+        "REST APIs",
+        "Authentication",
+        "RBAC",
+        "Validation",
+        "Error handling",
+        "API integration",
+      ],
     },
     {
       title: "AWS & Cloud",
@@ -86,21 +109,45 @@ export const portfolio = {
       label: "Operations",
       icon: "devops" as ExpertiseIcon,
       description: "Automation and environment practices that make releases repeatable.",
-      skills: ["CodeCommit", "CodePipeline", "CI/CD", "Docker", "GitHub Actions", "Git", "Environment management", "Troubleshooting"],
+      skills: [
+        "CodeCommit",
+        "CodePipeline",
+        "CI/CD",
+        "Docker",
+        "GitHub Actions",
+        "Git",
+        "Environment management",
+        "Troubleshooting",
+      ],
     },
     {
       title: "Data & Persistence",
       label: "Systems",
       icon: "data" as ExpertiseIcon,
       description: "Data modeling and persistence choices that support application behavior.",
-      skills: ["MongoDB", "MySQL", "PostgreSQL", "Prisma", "Firebase", "Supabase", "Database modeling"],
+      skills: [
+        "MongoDB",
+        "MySQL",
+        "PostgreSQL",
+        "Prisma",
+        "Firebase",
+        "Supabase",
+        "Database modeling",
+      ],
     },
     {
       title: "Frontend Integration",
       label: "Supporting",
       icon: "frontend" as ExpertiseIcon,
       description: "End-to-end product delivery when the interface must meet the API.",
-      skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Responsive UI", "API consumption"],
+      skills: [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Responsive UI",
+        "API consumption",
+      ],
     },
   ],
   experience: [
@@ -148,19 +195,22 @@ export const portfolio = {
       name: "postgre-api-template",
       url: "https://github.com/git-dariel/postgre-api-template",
       language: "TypeScript",
-      description: "A layered Express, PostgreSQL, and Prisma starter with validation, logging, and error handling.",
+      description:
+        "A layered Express, PostgreSQL, and Prisma starter with validation, logging, and error handling.",
     },
     {
       name: "bluetalk",
       url: "https://github.com/git-dariel/bluetalk",
       language: "Dart",
-      description: "An offline peer-to-peer messaging app focused on clean architecture and security hardening.",
+      description:
+        "An offline peer-to-peer messaging app focused on clean architecture and security hardening.",
     },
     {
       name: "mongo",
       url: "https://github.com/git-dariel/mongo",
       language: "TypeScript",
-      description: "A scalable MongoDB template built with Express.js and TypeScript for modern web applications.",
+      description:
+        "A scalable MongoDB template built with Express.js and TypeScript for modern web applications.",
     },
   ],
 } as const;

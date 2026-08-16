@@ -14,7 +14,6 @@ export default function Home() {
     <main className="min-h-screen overflow-x-clip bg-background text-foreground">
       <SiteHeader />
       <HeroSection />
-      <SpecializationsSection />
       <CaseStudiesSection />
       <ArchitectureSection />
       <ExpertiseSection />
