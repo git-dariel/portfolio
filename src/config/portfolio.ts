@@ -47,6 +47,43 @@ export const portfolio = {
       ],
       outcome: "End-to-end",
       outcomeLabel: "source-to-production delivery visibility",
+      architecture: {
+        title: "Enterprise AWS delivery architecture",
+        description:
+          "A sanitized logical view of the source-to-runtime workflow and its supporting AWS controls.",
+        diagram: `flowchart TB
+  TEAM["Engineering team"]
+
+  subgraph DELIVERY["Delivery plane"]
+    CC["CodeCommit<br/>Source control"]
+    CP["CodePipeline<br/>Release orchestration"]
+    EB["Elastic Beanstalk<br/>Managed deployment"]
+    CC -->|commit| CP
+    CP -->|deploy| EB
+  end
+
+  subgraph RUNTIME["Application environment"]
+    EC2["EC2<br/>Application compute"]
+    RDS[("RDS<br/>Relational data")]
+    S3[("S3<br/>Artifacts and objects")]
+    EC2 -->|queries| RDS
+    EC2 -->|reads and writes| S3
+  end
+
+  subgraph FOUNDATION["Foundation and operations"]
+    CF["CloudFormation<br/>Infrastructure as code"]
+    IAM["IAM<br/>Identity and access"]
+    CS["CloudShell<br/>Controlled diagnostics"]
+  end
+
+  TEAM --> CC
+  EB -->|manages runtime| EC2
+  CF -. provisions .-> EB
+  CF -. provisions .-> RDS
+  IAM -. service access .-> CC
+  IAM -. service roles .-> EB
+  CS -. operates .-> EB`,
+      },
     },
     {
       domain: "Backend / API integration",
@@ -62,6 +99,43 @@ export const portfolio = {
       technologies: ["Node.js", "Express.js", "TypeScript", "MongoDB", "Docker", "REST APIs"],
       outcome: "+45%",
       outcomeLabel: "reported increase in operational visibility",
+      architecture: {
+        title: "Extensible insurance API architecture",
+        description:
+          "A generalized service view showing reusable domain logic, provider integrations, persistence, and delivery.",
+        diagram: `flowchart TB
+  subgraph CLIENTS["Consumers"]
+    DASH["Operations dashboard"]
+    APPS["Product applications"]
+  end
+
+  subgraph API["Node.js and Express API"]
+    EDGE["REST boundary<br/>Auth, validation, errors"]
+    SERVICES["Domain services<br/>Product and policy workflows"]
+    CALC["Reusable calculation engine"]
+    EDGE --> SERVICES
+    SERVICES --> CALC
+  end
+
+  subgraph INTEGRATIONS["Data and integrations"]
+    PROVIDERS["External insurance services"]
+    DB[("MongoDB<br/>Operational data")]
+  end
+
+  subgraph DELIVERY["Container delivery"]
+    IMAGE["Docker image"]
+    PIPELINE["Automated delivery workflow"]
+    RUNTIME["Cloud runtime"]
+    IMAGE --> PIPELINE
+    PIPELINE --> RUNTIME
+  end
+
+  DASH -->|REST| EDGE
+  APPS -->|REST| EDGE
+  SERVICES -->|provider adapters| PROVIDERS
+  SERVICES -->|persist| DB
+  RUNTIME -. runs .-> EDGE`,
+      },
     },
     {
       domain: "Full-stack / API platform",
@@ -77,6 +151,50 @@ export const portfolio = {
       technologies: ["Next.js", "Node.js", "Prisma", "MongoDB", "Docker", "Cloud Run"],
       outcome: "−50%",
       outcomeLabel: "reported reduction in manual admin work",
+      architecture: {
+        title: "Booking and content platform architecture",
+        description:
+          "A generalized view of the user surfaces, domain-oriented APIs, persistence layer, and container runtime.",
+        diagram: `flowchart TB
+  subgraph CLIENTS["Experience layer"]
+    USERS["International customers"]
+    ADMINS["Content administrators"]
+    NEXT["Next.js application"]
+    USERS --> NEXT
+    ADMINS --> NEXT
+  end
+
+  subgraph PLATFORM["Node.js API platform"]
+    EDGE["REST API boundary"]
+    BOOKING["Booking service"]
+    AVAILABILITY["Availability service"]
+    PRICING["Dynamic pricing rules"]
+    CONTENT["Content service"]
+    EDGE --> BOOKING
+    EDGE --> AVAILABILITY
+    EDGE --> PRICING
+    EDGE --> CONTENT
+  end
+
+  subgraph DATA["Persistence"]
+    PRISMA["Prisma data access"]
+    MONGO[("MongoDB<br/>Bookings and content")]
+    PRISMA --> MONGO
+  end
+
+  subgraph DELIVERY["Container runtime"]
+    DOCKER["Docker image"]
+    CLOUDRUN["Cloud Run"]
+    DOCKER -->|deploy| CLOUDRUN
+  end
+
+  NEXT -->|REST| EDGE
+  BOOKING --> PRISMA
+  AVAILABILITY --> PRISMA
+  PRICING --> PRISMA
+  CONTENT --> PRISMA
+  CLOUDRUN -. hosts .-> EDGE`,
+      },
     },
   ],
   expertise: [

@@ -92,6 +92,55 @@ body {
   display: none;
 }
 
+.architecture-trigger {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.architecture-trigger::after {
+  position: absolute;
+  z-index: 0;
+  top: -35%;
+  bottom: -35%;
+  left: -40%;
+  width: 28%;
+  pointer-events: none;
+  content: "";
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgb(255 255 255 / 8%),
+    rgb(255 255 255 / 32%),
+    transparent
+  );
+  transform: skewX(-18deg) translateX(-220%);
+  animation: architecture-shine 4s ease-in-out infinite;
+}
+
+@keyframes architecture-shine {
+  0%,
+  58% {
+    opacity: 0;
+    transform: skewX(-18deg) translateX(-220%);
+  }
+
+  62% {
+    opacity: 1;
+  }
+
+  82% {
+    opacity: 1;
+    transform: skewX(-18deg) translateX(620%);
+  }
+
+  83%,
+  100% {
+    opacity: 0;
+    transform: skewX(-18deg) translateX(620%);
+  }
+}
+
 .scribble-circle {
   position: relative;
   display: inline-block;
@@ -179,5 +228,10 @@ body {
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+
+  .architecture-trigger::after {
+    animation: none;
+    opacity: 0;
   }
 }

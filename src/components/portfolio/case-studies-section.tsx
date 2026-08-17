@@ -1,5 +1,6 @@
 import { portfolio } from "@/config/portfolio";
 
+import { ArchitectureDialog } from "@/components/portfolio/architecture-dialog";
 import { SectionHeading } from "@/components/portfolio/section-heading";
 
 export function CaseStudiesSection() {
@@ -23,9 +24,12 @@ export function CaseStudiesSection() {
               </div>
 
               <div>
-                <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-start">
+                <div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-start">
                   <h3 className="max-w-2xl text-2xl font-semibold tracking-[-0.045em] sm:text-4xl">{study.title}</h3>
-                  <span className="font-mono text-[10px] uppercase tracking-[0.1em] text-muted-foreground">{study.scope}</span>
+                  <div className="flex shrink-0 flex-col items-start gap-3 sm:items-end">
+                    <span className="font-mono text-[10px] uppercase tracking-[0.1em] text-muted-foreground">{study.scope}</span>
+                    <ArchitectureDialog {...study.architecture} />
+                  </div>
                 </div>
                 <p className="mt-7 max-w-3xl text-base leading-7 text-muted">{study.summary}</p>
 

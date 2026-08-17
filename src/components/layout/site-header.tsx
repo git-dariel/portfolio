@@ -4,7 +4,6 @@ import { portfolio } from "@/config/portfolio";
 
 const navigation = [
   ["Work", "#work"],
-  ["Architecture", "#architecture"],
   ["Expertise", "#expertise"],
   ["Experience", "#experience"],
   ["About", "#about"],
