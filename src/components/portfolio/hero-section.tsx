@@ -1,7 +1,9 @@
 import Image from "next/image";
-import { ArrowDown, Download } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 
 import { portfolio } from "@/config/portfolio";
+
+import { ResumeDialog } from "@/components/portfolio/resume-dialog";
 
 export function HeroSection() {
   return (
@@ -29,10 +31,7 @@ export function HeroSection() {
                 View engineering work
                 <ArrowDown className="size-4" />
               </a>
-              <a href="/resume" className="inline-flex min-h-12 items-center justify-center gap-2 border border-black px-5 py-3 text-sm font-semibold transition-colors hover:bg-black hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black">
-                <Download className="size-4" />
-                Download resume
-              </a>
+              <ResumeDialog />
             </div>
           </div>
 
