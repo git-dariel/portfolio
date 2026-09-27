@@ -8,7 +8,7 @@ export function CaseStudiesSection() {
     <section id="work" className="section-pad scroll-mt-28 px-5 sm:px-8 lg:px-10 xl:scroll-mt-20">
       <div className="mx-auto max-w-7xl">
         <SectionHeading
-          index="01"
+          index="02"
           label="Selected work"
           title="Engineering outcomes, not just screenshots."
           description="Backend, API, and cloud delivery work presented through problems, decisions, and results. Company and client details are generalized where confidentiality applies."

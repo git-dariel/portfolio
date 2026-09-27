@@ -3,6 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 import { portfolio } from "@/config/portfolio";
 
 const navigation = [
+  ["Applications", "#applications"],
   ["Work", "#work"],
   ["Expertise", "#expertise"],
   ["Experience", "#experience"],

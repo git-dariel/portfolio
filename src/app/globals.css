@@ -5,8 +5,8 @@
   --foreground: #fafafa;
   --card: #0a0a0a;
   --card-foreground: #fafafa;
-  --muted: #a1a1aa;
-  --muted-foreground: #71717a;
+  --muted: #d4d4d8;
+  --muted-foreground: #a1a1aa;
   --border: #27272a;
   --primary: #fafafa;
   --primary-foreground: #09090b;
@@ -63,7 +63,7 @@ body {
 .hero-shell {
   display: grid;
   min-height: calc(100svh - 4rem);
-  grid-template-rows: auto minmax(0, 1fr) auto;
+  grid-template-rows: minmax(0, 1fr);
 }
 
 .hero-stage {
@@ -72,12 +72,6 @@ body {
 
 .hero-title {
   font-size: clamp(2.6rem, min(13vw, 9.5dvh), 6.9rem);
-}
-
-.hero-illustration {
-  max-height: min(72dvh, 48rem);
-  transform: scale(1.08);
-  transform-origin: center bottom;
 }
 
 .contact-title {
@@ -165,21 +159,12 @@ body {
   .hero-stage {
     padding-block: clamp(2.75rem, 8vw, 5rem);
   }
-
-  .hero-illustration {
-    max-height: min(62svh, 34rem);
-    transform: none;
-  }
 }
 
 @media (max-width: 39.999rem) {
   .hero-title,
   .contact-title {
     text-wrap: pretty;
-  }
-
-  .hero-illustration {
-    max-height: min(58svh, 27rem);
   }
 
   .scribble-circle::after {
@@ -201,6 +186,20 @@ body {
   }
 }
 
+@media (min-width: 64rem) and (max-width: 79.999rem) {
+  .hero-shell {
+    height: calc(100svh - 6.5rem);
+    min-height: 0;
+  }
+}
+
+@media (min-width: 80rem) {
+  .hero-shell {
+    height: calc(100svh - 4rem);
+    min-height: 0;
+  }
+}
+
 @media (min-width: 64rem) and (max-height: 46rem) {
   .section-pad {
     padding-block: 4.5rem;
@@ -219,10 +218,6 @@ body {
     font-size: 1rem;
     line-height: 1.65;
   }
-
-  .hero-illustration {
-    max-height: 64dvh;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -233,5 +228,19 @@ body {
   .architecture-trigger::after {
     animation: none;
     opacity: 0;
+  }
+}
+
+@media (min-width: 64rem) {
+  .applications-section {
+    padding-block: clamp(1rem, 3svh, 2rem);
+    scroll-margin-top: 6.5rem;
+  }
+
+}
+
+@media (min-width: 80rem) {
+  .applications-section {
+    scroll-margin-top: 4rem;
   }
 }

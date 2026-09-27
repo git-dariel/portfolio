@@ -26,7 +26,7 @@ export function PortfolioDialog({
         <Dialog.Content className="fixed left-1/2 top-1/2 z-[90] flex max-h-[92dvh] w-[calc(100%-1.5rem)] max-w-6xl -translate-x-1/2 -translate-y-1/2 flex-col border border-zinc-700 bg-[#050505] text-white shadow-2xl focus:outline-none sm:w-[calc(100%-3rem)]">
           <div className="flex items-start justify-between gap-6 border-b border-zinc-800 px-4 py-4 sm:px-6 sm:py-5">
             <div>
-              <p className="font-mono text-[9px] uppercase tracking-[0.12em] text-zinc-500">{eyebrow}</p>
+              <p className="font-mono text-[10px] uppercase tracking-[0.12em] text-zinc-400">{eyebrow}</p>
               <Dialog.Title className="mt-2 text-xl font-semibold tracking-[-0.035em] sm:text-2xl">{title}</Dialog.Title>
               <Dialog.Description className="mt-2 max-w-3xl text-sm leading-6 text-zinc-400">{description}</Dialog.Description>
             </div>

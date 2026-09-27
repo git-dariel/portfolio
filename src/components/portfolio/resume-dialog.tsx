@@ -28,7 +28,7 @@ export function ResumeDialog() {
         </div>
 
         <div className="mt-4 flex flex-col justify-between gap-4 border-t border-zinc-800 pt-4 sm:flex-row sm:items-center">
-          <p className="max-w-xl text-xs leading-5 text-zinc-500">If the PDF preview is unavailable in your browser, download the file to view it locally.</p>
+          <p className="max-w-xl text-xs leading-5 text-zinc-400">If the PDF preview is unavailable in your browser, download the file to view it locally.</p>
           <a href="/resume?download=1" download="Dariel-Avila-Resume.pdf" className="inline-flex min-h-11 w-full shrink-0 items-center justify-center gap-2 bg-white px-5 text-sm font-semibold text-black transition-opacity hover:opacity-75 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:w-fit">
             <Download className="size-4" />
             Download resume

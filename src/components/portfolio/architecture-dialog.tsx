@@ -99,13 +99,13 @@ function MermaidDiagram({ diagram, title }: { diagram: string; title: string }) 
     <div className="relative min-h-64 bg-white p-3 text-black sm:min-h-80 sm:p-6">
       {status === "loading" ? (
         <div className="absolute inset-0 flex items-center justify-center" aria-live="polite">
-          <span className="font-mono text-[10px] uppercase tracking-[0.12em] text-black/45">Rendering architecture…</span>
+          <span className="font-mono text-[10px] uppercase tracking-[0.12em] text-black">Rendering architecture…</span>
         </div>
       ) : null}
 
       {status === "error" ? (
         <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 px-6 text-center" role="alert">
-          <p className="max-w-sm text-sm leading-6 text-black/60">The architecture diagram could not be rendered.</p>
+          <p className="max-w-sm text-sm leading-6 text-black">The architecture diagram could not be rendered.</p>
           <button type="button" onClick={retryDiagram} className="min-h-10 cursor-pointer border border-black px-4 text-xs font-semibold transition-colors hover:bg-black hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black">
             Retry diagram
           </button>
@@ -142,7 +142,7 @@ export function ArchitectureDialog({
         <div className="border border-zinc-700">
           <MermaidDiagram diagram={diagram} title={title} />
         </div>
-        <p className="mt-3 font-mono text-[9px] uppercase leading-5 tracking-[0.08em] text-zinc-500">
+        <p className="mt-3 font-mono text-[10px] uppercase leading-5 tracking-[0.08em] text-zinc-400">
           Logical architecture only · Names and client-specific boundaries are generalized for confidentiality
         </p>
       </div>

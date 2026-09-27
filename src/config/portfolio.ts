@@ -1,10 +1,103 @@
 type ExpertiseIcon = "backend" | "cloud" | "devops" | "data" | "frontend";
 
+type PortfolioApplication = {
+  title: string;
+  category: string;
+  summary: string;
+  description: string;
+  technologies: readonly string[];
+  image: {
+    src: string;
+    alt: string;
+  } | null;
+  demoUrl: string | null;
+};
+
 export const portfolio = {
   email: "dariel.v.avila@gmail.com",
   github: "https://github.com/git-dariel",
   linkedin: "https://www.linkedin.com/in/darielavila",
   coreTechnologies: ["Node.js", "TypeScript", "AWS", "REST APIs", "Docker"],
+  applications: [
+    {
+      title: "GForce",
+      category: "Dance / Class booking",
+      summary:
+        "Professional dance classes for all ages and skill levels, with experienced choreographers across hip-hop, K-pop, heels, and more.",
+      description:
+        "GForce Dance Center is a well-known dance studio in the Philippines offering professional classes for all skill levels, from beginners to advanced dancers. Styles include hip-hop, K-pop, heels, and more, taught by experienced choreographers and open to students as young as four years old.",
+      technologies: [
+        "Next.js",
+        "Tailwind CSS",
+        "Node.js",
+        "Google Cloud Platform",
+        "Docker",
+        "Prisma",
+        "MongoDB",
+        "Xendit",
+      ],
+      image: { src: "/projects/gforce.png", alt: "GForce Dance Center website preview" },
+      demoUrl: "https://uat.gforceofficial.com/",
+    },
+    {
+      title: "SureOne",
+      category: "Insurance / Digital coverage",
+      summary:
+        "A digital insurance platform for comparing motorcycle and car coverage, calculating premiums, and getting quotes in one place.",
+      description:
+        "SureOne.ph is an online insurance platform in the Philippines where customers can browse and compute coverage for motorcycles and cars, with plans to expand into health, travel, home, and life insurance. Users select vehicle details, choose coverage, and get quotes in one place for a more accessible and convenient insurance experience.",
+      technologies: [
+        "React.js",
+        "Tailwind CSS",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Docker",
+        "Xendit",
+      ],
+      image: { src: "/projects/sureone.png", alt: "SureOne insurance platform preview" },
+      demoUrl: "https://www.sureone.ph/",
+    },
+    {
+      title: "Grid Property Ventures",
+      category: "Real estate / Property discovery",
+      summary:
+        "Property discovery and investment tools with structured listings, market insights, and price comparisons for Philippine real estate.",
+      description:
+        "Grid is a Philippine real-estate platform that helps users discover, analyze, and invest in properties through structured listings, market data, and tools for comparing prices, locations, and potential returns. It simplifies the property process with data-driven insights, transparent information, and streamlined transactions for buyers, sellers, and investors.",
+      technologies: ["React.js", "Tailwind CSS", "Node.js", "Express.js", "MongoDB", "Fastek"],
+      image: {
+        src: "/projects/grid.png",
+        alt: "Grid Property Ventures real-estate platform preview",
+      },
+      demoUrl: "https://grid.com.ph/",
+    },
+    {
+      title: "Office of Guidance and Counseling Services",
+      category: "Student wellness / Counseling",
+      summary:
+        "Mental health screening, counseling appointments, and wellness resources for university students.",
+      description:
+        "A comprehensive web application for mental health screening, counseling appointment management, and wellness resources for university students.",
+      technologies: ["React.js", "Tailwind CSS", "Node.js", "Express.js", "MongoDB", "Cloudinary"],
+      image: {
+        src: "/projects/guidance-center.png",
+        alt: "Office of Guidance and Counseling Services application preview",
+      },
+      demoUrl: "https://pup-guidance-center.vercel.app/",
+    },
+    {
+      title: "Pahinga",
+      category: "Desktop / Wellness",
+      summary:
+        "A quiet Windows tray companion that reminds you to take breaks, drink water, and move during long computer sessions.",
+      description:
+        "Pahinga is a calm desktop companion for Windows that helps you take breaks, drink water, and move during long computer sessions. It lives in your system tray and speaks up only when it matters.",
+      technologies: ["Electron.js", "Tailwind CSS", "Node.js", "better-sqlite3"],
+      image: { src: "/projects/pahinga.png", alt: "Pahinga desktop wellness companion preview" },
+      demoUrl: "https://pahinga-site.vercel.app/",
+    },
+  ] as readonly PortfolioApplication[],
   specializations: [
     {
       title: "Backend systems",
@@ -35,6 +128,7 @@ export const portfolio = {
         "Work with CloudFormation and IAM for repeatable, controlled infrastructure",
       ],
       technologies: [
+        "Lambda",
         "EC2",
         "Elastic Beanstalk",
         "S3",
@@ -220,7 +314,16 @@ export const portfolio = {
       label: "Current focus",
       icon: "cloud" as ExpertiseIcon,
       description: "Cloud resources and operational workflows used in enterprise delivery.",
-      skills: ["EC2", "Elastic Beanstalk", "S3", "RDS", "CloudShell", "CloudFormation", "IAM"],
+      skills: [
+        "Lambda",
+        "EC2",
+        "Elastic Beanstalk",
+        "S3",
+        "RDS",
+        "CloudShell",
+        "CloudFormation",
+        "IAM",
+      ],
     },
     {
       title: "DevOps & Delivery",
@@ -310,6 +413,13 @@ export const portfolio = {
   ],
   repositories: [
     {
+      name: "pup-student-handbook-rag-api",
+      url: "https://github.com/git-dariel/pup-student-handbook-rag-api",
+      language: "Python",
+      description:
+        "Semantic search for the PUP Student Handbook using FastAPI, Sentence Transformers, and FAISS, returning relevant passages with source metadata.",
+    },
+    {
       name: "postgre-api-template",
       url: "https://github.com/git-dariel/postgre-api-template",
       language: "TypeScript",
@@ -317,11 +427,11 @@ export const portfolio = {
         "A layered Express, PostgreSQL, and Prisma starter with validation, logging, and error handling.",
     },
     {
-      name: "bluetalk",
-      url: "https://github.com/git-dariel/bluetalk",
-      language: "Dart",
+      name: "BgGone",
+      url: "https://github.com/git-dariel/BgGone",
+      language: "TypeScript",
       description:
-        "An offline peer-to-peer messaging app focused on clean architecture and security hardening.",
+        "A self-hostable background removal studio with a Next.js interface and Flask API for image segmentation, editing, and export.",
     },
     {
       name: "mongo",
@@ -329,6 +439,13 @@ export const portfolio = {
       language: "TypeScript",
       description:
         "A scalable MongoDB template built with Express.js and TypeScript for modern web applications.",
+    },
+    {
+      name: "bluetalk",
+      url: "https://github.com/git-dariel/bluetalk",
+      language: "Dart",
+      description:
+        "Offline peer-to-peer messaging built with Flutter and Google Nearby Connections for direct communication between nearby devices.",
     },
   ],
 } as const;

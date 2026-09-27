@@ -7,7 +7,7 @@ export function ExperienceSection() {
     <section id="experience" className="section-pad scroll-mt-28 border-y border-border bg-background px-5 text-foreground sm:px-8 lg:px-10 xl:scroll-mt-20">
       <div className="mx-auto max-w-7xl">
         <SectionHeading
-          index="03"
+          index="04"
           label="Experience"
           title="From backend delivery to enterprise cloud systems."
           description="Progressively broader ownership across APIs, platform engineering, technical leadership, deployment, and production support."
@@ -20,7 +20,7 @@ export function ExperienceSection() {
                 <span className={`mt-1 size-2 rounded-full border border-white/35 ${index === 0 ? "bg-white" : "bg-transparent"}`} />
                 <div>
                   <p className="font-mono text-[10px] uppercase tracking-[0.1em] text-muted-foreground">{role.period}</p>
-                  {index === 0 ? <p className="mt-2 font-mono text-[9px] uppercase tracking-[0.12em]">Current</p> : null}
+                  {index === 0 ? <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.12em]">Current</p> : null}
                 </div>
               </div>
               <div>
@@ -29,7 +29,7 @@ export function ExperienceSection() {
               </div>
               <div>
                 <p className="max-w-2xl text-sm leading-7 text-muted">{role.description}</p>
-                <p className="mt-5 break-words font-mono text-[9px] uppercase leading-5 tracking-[0.06em] text-muted-foreground sm:text-[10px] sm:tracking-[0.08em]">{role.tags.map((tag) => `#${tag}`).join("  ")}</p>
+                <p className="mt-5 break-words font-mono text-[10px] uppercase leading-5 tracking-[0.06em] text-muted-foreground sm:tracking-[0.08em]">{role.tags.map((tag) => `#${tag}`).join("  ")}</p>
               </div>
             </article>
           ))}
