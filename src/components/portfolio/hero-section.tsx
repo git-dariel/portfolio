@@ -10,11 +10,6 @@ export function HeroSection() {
       className="scroll-mt-28 border-b border-border bg-white text-black xl:scroll-mt-20"
     >
       <div className="hero-shell mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
-        {/* <div className="flex items-start gap-2 border-b border-black/15 py-3.5 font-mono text-[10px] uppercase leading-5 tracking-[0.1em] text-black sm:items-center sm:py-4 sm:text-[11px] sm:tracking-[0.12em]">
-          <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-black sm:mt-0" />
-          <span>Advanced App Engineering Sr. Analyst · Accenture</span>
-        </div> */}
-
         <div className="hero-stage grid min-h-0 gap-10 lg:grid-cols-[1.1fr_.9fr] lg:items-center">
           <div className="relative z-10">
             <p className="font-mono text-[10px] uppercase leading-5 tracking-[0.11em] text-black sm:text-xs sm:tracking-[0.14em]">
@@ -49,7 +44,7 @@ export function HeroSection() {
 
               <div className="relative mx-2 aspect-[4/5] overflow-hidden rounded-[2rem] border border-black/15 bg-zinc-100 sm:mx-5 lg:mx-6">
                 <Image
-                  src="/illustrations/me.png"
+                  src="/illustrations/dar.png"
                   alt="Portrait of Dariel Avila"
                   fill
                   priority
