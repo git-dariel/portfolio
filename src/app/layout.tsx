@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 
+import { activeThemeName, activeThemeStyle } from "@/theme";
+
 import "./globals.css";
 
 const title = "Dariel Avila | Backend Engineer, APIs, DevOps & AWS";
@@ -79,7 +81,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+    <html
+      lang="en"
+      data-theme={activeThemeName}
+      style={activeThemeStyle}
+      className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+    >
       <body>{children}</body>
     </html>
   );

@@ -17,7 +17,7 @@ export function ExperienceSection() {
           {portfolio.experience.map((role, index) => (
             <article key={`${role.company}-${role.role}`} className="grid gap-5 border-b border-border py-9 md:grid-cols-[.45fr_.65fr_1.4fr] md:gap-10 md:py-12">
               <div className="flex items-start gap-3">
-                <span className={`mt-1 size-2 rounded-full border border-white/35 ${index === 0 ? "bg-white" : "bg-transparent"}`} />
+                <span className={`mt-1 size-2 rounded-full border border-foreground/35 ${index === 0 ? "bg-foreground" : "bg-transparent"}`} />
                 <div>
                   <p className="font-mono text-[10px] uppercase tracking-[0.1em] text-muted-foreground">{role.period}</p>
                   {index === 0 ? <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.12em]">Current</p> : null}

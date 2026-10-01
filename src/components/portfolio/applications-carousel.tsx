@@ -46,22 +46,14 @@ export function ApplicationsCarousel({ children }: { children: ReactNode }) {
     scroll(event.key === "ArrowLeft" ? -1 : 1);
   }
 
-  const buttonClass = "inline-flex size-11 items-center justify-center border border-black/15 bg-white text-black transition-colors hover:bg-black hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black disabled:cursor-not-allowed disabled:opacity-35 disabled:hover:bg-white disabled:hover:text-black";
+  const buttonClass = "absolute top-1/2 z-10 inline-flex size-11 -translate-y-1/2 items-center justify-center bg-surface text-surface-foreground transition-colors hover:bg-surface-foreground hover:text-surface focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-surface-ring disabled:cursor-not-allowed disabled:hover:bg-surface disabled:hover:text-surface-foreground";
 
   return (
-    <div className="relative mt-8 sm:px-12 lg:mt-5" role="region" aria-roledescription="carousel" aria-label="Applications">
-      <div className="mb-3 flex justify-end gap-2 sm:hidden">
-        <button type="button" aria-label="Previous application" aria-controls="applications-track" disabled={!canScrollBack} onClick={() => scroll(-1)} className={buttonClass}>
-          <ArrowLeft className="size-5" aria-hidden="true" />
-        </button>
-        <button type="button" aria-label="Next application" aria-controls="applications-track" disabled={!canScrollForward} onClick={() => scroll(1)} className={buttonClass}>
-          <ArrowRight className="size-5" aria-hidden="true" />
-        </button>
-      </div>
-      <button type="button" aria-label="Previous application" aria-controls="applications-track" disabled={!canScrollBack} onClick={() => scroll(-1)} className={`${buttonClass} absolute left-0 top-1/2 z-10 hidden -translate-y-1/2 sm:inline-flex`}>
+    <div className="relative mt-8 px-5 sm:px-12 lg:mt-5" role="region" aria-roledescription="carousel" aria-label="Applications">
+      <button type="button" aria-label="Previous application" aria-controls="applications-track" disabled={!canScrollBack} onClick={() => scroll(-1)} className={`${buttonClass} -left-5 sm:left-0`}>
         <ArrowLeft className="size-5" aria-hidden="true" />
       </button>
-      <button type="button" aria-label="Next application" aria-controls="applications-track" disabled={!canScrollForward} onClick={() => scroll(1)} className={`${buttonClass} absolute right-0 top-1/2 z-10 hidden -translate-y-1/2 sm:inline-flex`}>
+      <button type="button" aria-label="Next application" aria-controls="applications-track" disabled={!canScrollForward} onClick={() => scroll(1)} className={`${buttonClass} -right-5 sm:right-0`}>
         <ArrowRight className="size-5" aria-hidden="true" />
       </button>
       <div
@@ -70,7 +62,7 @@ export function ApplicationsCarousel({ children }: { children: ReactNode }) {
         tabIndex={0}
         onKeyDown={handleKeyDown}
         aria-label="Application cards. Use the arrow keys or swipe to browse."
-        className="grid auto-cols-[100%] grid-flow-col snap-x snap-mandatory overflow-x-auto overscroll-x-contain border-l border-t border-black/15 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black md:auto-cols-[50%] lg:auto-cols-[33.333333%]"
+        className="grid auto-cols-[100%] grid-flow-col snap-x snap-mandatory overflow-x-auto overscroll-x-contain border-l border-t border-surface-foreground/15 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-surface-ring md:auto-cols-[50%] lg:auto-cols-[33.333333%]"
       >
         {children}
       </div>

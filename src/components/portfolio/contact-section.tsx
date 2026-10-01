@@ -12,7 +12,7 @@ export function ContactSection() {
             <h2 className="contact-title max-w-5xl text-balance font-semibold leading-[0.9] tracking-[-0.075em]">Let’s build something reliable.</h2>
             <p className="mt-7 max-w-2xl text-base leading-7 text-muted">I’m open to conversations about backend systems, platform delivery, DevOps, and software engineering opportunities.</p>
           </div>
-          <a href={`mailto:${portfolio.email}`} className="inline-flex min-h-12 w-full shrink-0 items-center justify-center gap-2 bg-white px-5 py-3 text-sm font-semibold text-black transition-opacity hover:opacity-70 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:w-fit">
+          <a href={`mailto:${portfolio.email}`} className="inline-flex min-h-12 w-full shrink-0 items-center justify-center gap-2 bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-70 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring sm:w-fit">
             Start a conversation <ArrowUpRight className="size-4" />
           </a>
         </div>

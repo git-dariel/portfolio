@@ -22,16 +22,16 @@ export function PortfolioDialog({
       <Dialog.Trigger asChild>{trigger}</Dialog.Trigger>
 
       <Dialog.Portal>
-        <Dialog.Overlay className="fixed inset-0 z-[80] bg-black/80 backdrop-blur-sm data-[state=closed]:animate-none" />
-        <Dialog.Content className="fixed left-1/2 top-1/2 z-[90] flex max-h-[92dvh] w-[calc(100%-1.5rem)] max-w-6xl -translate-x-1/2 -translate-y-1/2 flex-col border border-zinc-700 bg-[#050505] text-white shadow-2xl focus:outline-none sm:w-[calc(100%-3rem)]">
-          <div className="flex items-start justify-between gap-6 border-b border-zinc-800 px-4 py-4 sm:px-6 sm:py-5">
+        <Dialog.Overlay className="fixed inset-0 z-[80] bg-overlay backdrop-blur-sm data-[state=closed]:animate-none" />
+        <Dialog.Content className="fixed left-1/2 top-1/2 z-[90] flex max-h-[92dvh] w-[calc(100%-1.5rem)] max-w-6xl -translate-x-1/2 -translate-y-1/2 flex-col border border-border-strong bg-background text-foreground shadow-2xl focus:outline-none sm:w-[calc(100%-3rem)]">
+          <div className="flex items-start justify-between gap-6 border-b border-border px-4 py-4 sm:px-6 sm:py-5">
             <div>
-              <p className="font-mono text-[10px] uppercase tracking-[0.12em] text-zinc-400">{eyebrow}</p>
+              <p className="font-mono text-[10px] uppercase tracking-[0.12em] text-muted-foreground">{eyebrow}</p>
               <Dialog.Title className="mt-2 text-xl font-semibold tracking-[-0.035em] sm:text-2xl">{title}</Dialog.Title>
-              <Dialog.Description className="mt-2 max-w-3xl text-sm leading-6 text-zinc-400">{description}</Dialog.Description>
+              <Dialog.Description className="mt-2 max-w-3xl text-sm leading-6 text-muted-foreground">{description}</Dialog.Description>
             </div>
             <Dialog.Close asChild>
-              <button type="button" aria-label={`Close ${title}`} className="inline-flex size-11 shrink-0 cursor-pointer items-center justify-center border border-zinc-700 text-zinc-400 transition-colors hover:border-white hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
+              <button type="button" aria-label={`Close ${title}`} className="inline-flex size-11 shrink-0 cursor-pointer items-center justify-center border border-border-strong text-muted-foreground transition-colors hover:border-foreground hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring">
                 <X className="size-4" />
               </button>
             </Dialog.Close>

@@ -8,7 +8,7 @@ export function AboutSection() {
   return (
     <section
       id="about"
-      className="section-pad scroll-mt-28 bg-white px-5 text-black sm:px-8 lg:px-10 xl:scroll-mt-20"
+      className="section-pad scroll-mt-28 bg-surface px-5 text-surface-foreground sm:px-8 lg:px-10 xl:scroll-mt-20"
     >
       <div className="mx-auto max-w-7xl">
         <SectionHeading
@@ -19,7 +19,7 @@ export function AboutSection() {
         />
 
         <div className="mt-10 grid gap-10 sm:mt-14 lg:grid-cols-[1fr_1fr] lg:gap-20">
-          <div className="min-w-0 max-w-2xl space-y-5 text-base leading-7 text-black">
+          <div className="min-w-0 max-w-2xl space-y-5 text-base leading-7 text-surface-foreground">
             <p>
               I’m Dariel, a software engineer based in Mandaluyong City, Philippines. My work
               centers on backend architecture, API integrations, data-driven applications, and the
@@ -33,53 +33,43 @@ export function AboutSection() {
             </p>
           </div>
 
-          <div className="min-w-0 grid grid-cols-1 border-l border-t border-black/15 min-[360px]:grid-cols-2">
+          <div className="min-w-0 grid grid-cols-1 border-l border-t border-surface-foreground/15 min-[360px]:grid-cols-2">
             {portfolio.highlights.map((item) => (
-              <div key={item.label} className="border-b border-r border-black/15 p-5 sm:p-7">
+              <div key={item.label} className="border-b border-r border-surface-foreground/15 p-5 sm:p-7">
                 <p className="text-3xl font-semibold tracking-[-0.055em] sm:text-4xl">
                   {item.value}
                 </p>
-                <p className="mt-3 max-w-28 text-xs leading-5 text-black">{item.label}</p>
+                <p className="mt-3 max-w-28 text-xs leading-5 text-surface-foreground">{item.label}</p>
               </div>
             ))}
           </div>
         </div>
 
-        <div className="mt-16 border-t border-black/15 pt-8 sm:mt-24">
-          <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
-            <div>
-              <p className="font-mono text-[10px] uppercase tracking-[0.12em] text-black">
-                Open source
-              </p>
-              <h3 className="mt-3 text-2xl font-semibold tracking-[-0.045em] sm:text-3xl">
-                Selected public repositories
-              </h3>
-            </div>
-            <a
-              href={portfolio.github}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-1.5  pb-0.5 text-sm hover:underline underline-offset-4"
-            >
-              GitHub profile <ArrowUpRight className="size-3.5" />
-            </a>
+        <div className="mt-16 border-t border-surface-foreground/15 pt-8 sm:mt-24">
+          <div>
+            <p className="font-mono text-[10px] uppercase tracking-[0.12em] text-surface-foreground">
+              Open source
+            </p>
+            <h3 className="mt-3 text-2xl font-semibold tracking-[-0.045em] sm:text-3xl">
+              Selected public repositories
+            </h3>
           </div>
 
-          <div className="mt-10 border-t border-black/15">
+          <div className="mt-10 border-t border-surface-foreground/15">
             {portfolio.repositories.map((repository, index) => (
               <a
                 key={repository.name}
                 href={repository.url}
                 target="_blank"
                 rel="noreferrer"
-                className="group grid gap-3 border-b border-black/15 py-6 hover:underline underline-offset-4 sm:grid-cols-[48px_.8fr_1.2fr_80px] sm:items-center sm:gap-6"
+                className="group grid gap-3 border-b border-surface-foreground/15 py-6 underline-offset-4 hover:underline sm:grid-cols-[48px_.8fr_1.2fr_80px] sm:items-center sm:gap-6"
               >
-                <span className="font-mono text-[10px] text-black">0{index + 1}</span>
+                <span className="font-mono text-[10px] text-surface-foreground">0{index + 1}</span>
                 <h4 className="min-w-0 break-words font-mono text-sm font-semibold">
                   {repository.name}
                 </h4>
-                <p className="min-w-0 text-sm leading-6 text-black">{repository.description}</p>
-                <span className="flex items-center justify-start gap-2 font-mono text-[10px] uppercase tracking-[0.08em] text-black sm:justify-end">
+                <p className="min-w-0 text-sm leading-6 text-surface-foreground">{repository.description}</p>
+                <span className="flex items-center justify-start gap-2 font-mono text-[10px] uppercase tracking-[0.08em] text-surface-foreground sm:justify-end">
                   {repository.language}
                   <ArrowUpRight className="size-3" />
                 </span>

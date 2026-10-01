@@ -36,7 +36,7 @@ export function CaseStudiesSection() {
                 <div className="mt-8 grid gap-8 border-t border-border pt-7 sm:mt-10 sm:grid-cols-2 sm:gap-9">
                   <div>
                     <p className="font-mono text-[10px] uppercase tracking-[0.12em] text-muted-foreground">Engineering focus</p>
-                    <ul className="mt-4 space-y-3 text-sm leading-6 text-zinc-300">
+                    <ul className="mt-4 space-y-3 text-sm leading-6 text-muted">
                       {study.focus.map((item) => (
                         <li key={item} className="grid grid-cols-[14px_1fr] gap-2"><span aria-hidden="true">—</span><span>{item}</span></li>
                       ))}
@@ -44,7 +44,7 @@ export function CaseStudiesSection() {
                   </div>
                   <div>
                     <p className="font-mono text-[10px] uppercase tracking-[0.12em] text-muted-foreground">Stack & systems</p>
-                    <p className="mt-4 font-mono text-xs leading-7 text-zinc-400">{study.technologies.join(" / ")}</p>
+                    <p className="mt-4 font-mono text-xs leading-7 text-muted-foreground">{study.technologies.join(" / ")}</p>
                   </div>
                 </div>
               </div>
