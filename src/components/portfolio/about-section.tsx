@@ -19,7 +19,7 @@ export function AboutSection() {
         />
 
         <div className="mt-10 grid gap-10 sm:mt-14 lg:grid-cols-[1fr_1fr] lg:gap-20">
-          <div className="max-w-2xl space-y-5 text-base leading-7 text-black">
+          <div className="min-w-0 max-w-2xl space-y-5 text-base leading-7 text-black">
             <p>
               I’m Dariel, a software engineer based in Mandaluyong City, Philippines. My work
               centers on backend architecture, API integrations, data-driven applications, and the
@@ -33,7 +33,7 @@ export function AboutSection() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 border-l border-t border-black/15 min-[360px]:grid-cols-2">
+          <div className="min-w-0 grid grid-cols-1 border-l border-t border-black/15 min-[360px]:grid-cols-2">
             {portfolio.highlights.map((item) => (
               <div key={item.label} className="border-b border-r border-black/15 p-5 sm:p-7">
                 <p className="text-3xl font-semibold tracking-[-0.055em] sm:text-4xl">
@@ -78,7 +78,7 @@ export function AboutSection() {
                 <h4 className="min-w-0 break-words font-mono text-sm font-semibold">
                   {repository.name}
                 </h4>
-                <p className="text-sm leading-6 text-black">{repository.description}</p>
+                <p className="min-w-0 text-sm leading-6 text-black">{repository.description}</p>
                 <span className="flex items-center justify-start gap-2 font-mono text-[10px] uppercase tracking-[0.08em] text-black sm:justify-end">
                   {repository.language}
                   <ArrowUpRight className="size-3" />

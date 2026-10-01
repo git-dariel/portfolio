@@ -23,11 +23,11 @@ export function ExperienceSection() {
                   {index === 0 ? <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.12em]">Current</p> : null}
                 </div>
               </div>
-              <div>
+              <div className="min-w-0">
                 <h3 className="font-semibold">{role.role}</h3>
                 <p className="mt-1 text-sm text-muted-foreground">{role.company}</p>
               </div>
-              <div>
+              <div className="min-w-0">
                 <p className="max-w-2xl text-sm leading-7 text-muted">{role.description}</p>
                 <p className="mt-5 break-words font-mono text-[10px] uppercase leading-5 tracking-[0.06em] text-muted-foreground sm:tracking-[0.08em]">{role.tags.map((tag) => `#${tag}`).join("  ")}</p>
               </div>

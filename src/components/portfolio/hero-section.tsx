@@ -10,8 +10,8 @@ export function HeroSection() {
       className="scroll-mt-28 border-b border-border bg-white text-black xl:scroll-mt-20"
     >
       <div className="hero-shell mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
-        <div className="hero-stage grid min-h-0 gap-10 lg:grid-cols-[1.1fr_.9fr] lg:items-center">
-          <div className="relative z-10">
+        <div className="hero-stage grid min-h-0 gap-10 md:grid-cols-[minmax(0,1.15fr)_minmax(17rem,.85fr)] md:items-center md:gap-8 xl:grid-cols-[minmax(0,39rem)_minmax(20rem,28rem)] xl:justify-center xl:gap-12">
+          <div className="relative z-10 min-w-0">
             <p className="font-mono text-[10px] uppercase leading-5 tracking-[0.11em] text-black sm:text-xs sm:tracking-[0.14em]">
               Backend Engineering / APIs / DevOps / AWS
             </p>
@@ -35,8 +35,8 @@ export function HeroSection() {
             </div>
           </div>
 
-          <div className="hero-art relative flex min-h-0 items-end justify-center overflow-visible lg:justify-end">
-            <div className="relative w-full max-w-[21rem] py-9 sm:max-w-[25rem] sm:py-10 lg:max-w-[min(32rem,56svh)] lg:py-8">
+          <div className="hero-art relative flex min-h-0 min-w-0 items-end justify-center overflow-visible md:justify-start">
+            <div className="relative w-full max-w-[21rem] py-9 sm:max-w-[25rem] sm:py-10 md:max-w-[23rem] lg:max-w-[min(30rem,56svh)] lg:py-8 xl:max-w-[28rem]">
               <div
                 aria-hidden="true"
                 className="absolute inset-x-2 top-9 bottom-9 translate-x-2 translate-y-2 rounded-[2rem] border border-black/25 sm:inset-x-5 sm:top-10 sm:bottom-10 lg:inset-x-6 lg:top-8 lg:bottom-8"
@@ -54,24 +54,24 @@ export function HeroSection() {
               </div>
 
               <ul className="pointer-events-none absolute inset-0 z-10 font-mono">
-                <li className="absolute left-0 top-0 flex min-h-14 items-center gap-2.5 rounded-2xl border border-black/10 bg-white px-3 py-2.5 text-black shadow-[0_16px_40px_rgb(0_0_0/0.16)] sm:gap-3 sm:px-4">
+                <li className="absolute left-0 top-0 flex min-h-14 items-center gap-2 rounded-2xl border border-black/10 bg-white px-2.5 py-2.5 text-black shadow-[0_16px_40px_rgb(0_0_0/0.16)] min-[360px]:gap-2.5 min-[360px]:px-3 sm:gap-3 sm:px-4">
                   <Briefcase className="size-4 shrink-0 sm:size-5" aria-hidden="true" />
-                  <span className="flex items-baseline gap-2 whitespace-nowrap">
+                  <span className="flex items-baseline gap-1.5 whitespace-nowrap min-[360px]:gap-2">
                     <strong className="text-lg leading-none sm:text-xl">3+</strong>
-                    <span className="text-[10px] font-medium sm:text-xs">Years of Experience</span>
+                    <span className="text-[9px] font-medium min-[360px]:text-[10px] sm:text-xs">Years of Experience</span>
                   </span>
                 </li>
 
-                <li className="absolute right-0 top-1/2 flex min-h-12 -translate-y-1/2 items-center gap-2.5 rounded-2xl border border-black/10 bg-white px-3.5 py-2.5 text-black shadow-[0_16px_40px_rgb(0_0_0/0.16)] sm:min-h-14 sm:px-4">
+                <li className="absolute right-0 top-1/2 flex min-h-12 -translate-y-1/2 items-center gap-2 rounded-2xl border border-black/10 bg-white px-2.5 py-2.5 text-black shadow-[0_16px_40px_rgb(0_0_0/0.16)] min-[360px]:gap-2.5 min-[360px]:px-3.5 sm:min-h-14 sm:px-4">
                   <Lightbulb className="size-4 shrink-0 sm:size-5" aria-hidden="true" />
-                  <span className="whitespace-nowrap text-[10px] font-semibold uppercase tracking-[0.08em] sm:text-xs">
+                  <span className="whitespace-nowrap text-[9px] font-semibold uppercase tracking-[0.06em] min-[360px]:text-[10px] min-[360px]:tracking-[0.08em] sm:text-xs">
                     Innovator
                   </span>
                 </li>
 
-                <li className="absolute bottom-0 left-4 flex min-h-12 items-center gap-2.5 rounded-2xl border border-black/10 bg-white px-3.5 py-2.5 text-black shadow-[0_16px_40px_rgb(0_0_0/0.16)] sm:left-8 sm:min-h-14 sm:px-4">
+                <li className="absolute bottom-0 left-2 flex min-h-12 items-center gap-2 rounded-2xl border border-black/10 bg-white px-2.5 py-2.5 text-black shadow-[0_16px_40px_rgb(0_0_0/0.16)] min-[360px]:left-4 min-[360px]:gap-2.5 min-[360px]:px-3.5 sm:left-8 sm:min-h-14 sm:px-4">
                   <Network className="size-4 shrink-0 sm:size-5" aria-hidden="true" />
-                  <span className="whitespace-nowrap text-[10px] font-semibold uppercase tracking-[0.08em] sm:text-xs">
+                  <span className="whitespace-nowrap text-[9px] font-semibold uppercase tracking-[0.06em] min-[360px]:text-[10px] min-[360px]:tracking-[0.08em] sm:text-xs">
                     Cross Functional
                   </span>
                 </li>

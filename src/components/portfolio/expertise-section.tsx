@@ -18,12 +18,12 @@ export function ExpertiseSection() {
           {portfolio.expertise.map((group, index) => (
             <article key={group.title} className="grid gap-5 border-b border-black/15 py-8 sm:grid-cols-[48px_.65fr_1.35fr] sm:gap-8 sm:py-10">
               <span className="font-mono text-[10px] text-black">0{index + 1}</span>
-              <div>
+              <div className="min-w-0">
                 <p className="font-mono text-[10px] uppercase tracking-[0.1em] text-black">{group.label}</p>
                 <h3 className="mt-2 text-xl font-semibold tracking-[-0.03em]">{group.title}</h3>
                 <p className="mt-3 max-w-sm text-sm leading-6 text-black">{group.description}</p>
               </div>
-              <p className="break-words font-mono text-xs leading-7 text-black sm:pt-5">{group.skills.join(" / ")}</p>
+              <p className="min-w-0 break-words font-mono text-xs leading-7 text-black sm:pt-5">{group.skills.join(" / ")}</p>
             </article>
           ))}
         </div>

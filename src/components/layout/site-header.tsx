@@ -35,7 +35,7 @@ export function SiteHeader() {
             href={`mailto:${portfolio.email}`}
             className="inline-flex shrink-0 items-center gap-1.5 border-b border-foreground pb-0.5 text-xs font-medium transition-opacity hover:opacity-60 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring sm:text-sm"
           >
-            Say hello
+            <span className="sr-only min-[360px]:not-sr-only">Say hello</span>
             <ArrowUpRight className="size-3.5" />
           </a>
         </div>
